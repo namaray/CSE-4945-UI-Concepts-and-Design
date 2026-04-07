@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Guide: Visual Hierarchy & Structure</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f8f9fa;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --accent-color: #e9ecef;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #444;
+        }
+
+        ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            color: #444;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background-color: var(--secondary-color);
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .highlight-box strong {
+            color: var(--primary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Module 2 Study Guide</h1>
+        <p>Mind in Mind Chapter 3: Visual Hierarchy & Structure</p>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Course Index</a>
+
+        <div class="content-card">
+            <h2>The Core of Visual Hierarchy</h2>
+            <p>Visual hierarchy refers to the arrangement of information in a way that implies importance. It guides the user's eye toward their goals and makes a display incredibly easy to scan.</p>
+            <p>To achieve good hierarchy, you must:</p>
+            <ul>
+                <li><strong>Break information down:</strong> Avoid large walls of text.</li>
+                <li><strong>Label Prominently:</strong> Make headings and key data points obvious.</li>
+            </ul>
+            <p>A structured display allows users to quickly extract desired information while easily skipping over undesired information.</p>
+        </div>
+
+        <div class="content-card">
+            <h2>Key Principles for Structuring UI</h2>
+
+            <h3>1. We Seek Structure</h3>
+            <p>Users do not read UI; they scan it. Paragraphs of text are difficult to parse quickly. By taking unstructured data (like a paragraph describing flight details or a to-do list) and converting it into structured data (using bold labels, bullet points, and distinct rows), you drastically reduce cognitive load.</p>
+
+            <h3>2. Don't Bury Information</h3>
+            <p>A massive, undifferentiated list of links or options is overwhelming. Group related items together and use clear sub-headings. <em>Example: Instead of a long list of DMV links, categorize them into a table under headers like "Renewals," "Duplicates," and "Changes."</em></p>
+
+            <h3>3. Remove Repetition & Noise</h3>
+            <p>Redundant text clutters the interface and makes it harder to find the actual data. If every item in a search result starts with the same 5 words (e.g., "Buy HP Color LaserJet..."), remove those words. Let the layout, imagery, and concise titles do the talking.</p>
+
+            <h3>4. Use Contrast</h3>
+            <p>Contrast isn't just about light vs. dark; it's about distinguishing data from labels. If a table consists of uniform gray text, it all blurs together. To improve scanning:</p>
+            <ul>
+                <li>Make values bold or darker than their labels.</li>
+                <li>Align numbers (like currency) to the right for easy math/scanning.</li>
+                <li>Use alternating background colors (zebra striping) for rows.</li>
+            </ul>
+
+            <div class="highlight-box">
+                <strong>Chunking (Structure is Easier to Scan):</strong><br>
+                Long strings of characters are difficult for the brain to process. Break them down into familiar "chunks."<br>
+                <em>Hard to read:</em> 4151234567 | 1234567890123456<br>
+                <em>Easy to read:</em> (415) 123-4567 | 1234 5678 9012 3456
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h2>How to Create a Clear Visual Hierarchy</h2>
+            <p>You can organize and prioritize contents using three main visual levers:</p>
+
+            <ul>
+                <li><strong>Size:</strong> The more important a headline or element is, the larger it should be. Big, bold elements grab attention first as users scan a page.</li>
+                <li><strong>Prominence (Position):</strong> The most critical content should be placed near the top of the page. Users should be able to view their primary goal without having to scroll too far.</li>
+                <li><strong>Content Relationships:</strong> Group similar content types by displaying them in a similar visual style or within a clearly defined boundary (connecting back to the Gestalt principles).</li>
+            </ul>
+
+            <h3>Hierarchy in Controls</h3>
+            <p>Hierarchy doesn't just apply to text—it applies to forms, settings menus, and dialog boxes. Group related settings together (e.g., all audio settings in one pane, all MIDI settings in another). Use sliders, dropdowns, and toggles thoughtfully rather than throwing them all onto a single cluttered screen.</p>
+            <p><em>Note of caution:</em> Don't just make an element massive or a loud color simply to force users to look at it (like an obnoxious "Remove Account" button). This breaks the natural hierarchy and annoys the user.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CSE 4945 (B) - UI: Concepts and Design Study Materials.</p>
+    </footer>
+
+</body>
+</html>
