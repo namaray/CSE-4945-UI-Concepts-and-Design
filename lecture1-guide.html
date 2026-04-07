@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Guide: Perception & Gestalt Principles</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f8f9fa;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --accent-color: #e9ecef;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #444;
+        }
+
+        ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            color: #444;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background-color: var(--secondary-color);
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .highlight-box strong {
+            color: var(--primary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Module 1 Study Guide</h1>
+        <p>Mind in Mind: Perception & Gestalt Principles</p>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Course Index</a>
+
+        <div class="content-card">
+            <h2>The Basics: UI vs. UX</h2>
+            <p>Before diving into psychology, it is important to distinguish between the two core facets of interface design:</p>
+            <ul>
+                <li><strong>UI (User Interface):</strong> Focuses on <em>how</em> the product is designed. It is the visual layout, buttons, text, and interactive elements.</li>
+                <li><strong>UX (User Experience):</strong> The <em>overall experience</em> the user has with the product. It is deeply rooted in human psychology, anticipating user needs and behaviors.</li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h2>Chapter 1: We Perceive What We Expect</h2>
+            <p>Human perception is not like a camera recording objective reality. What we see is heavily influenced by our expectations, surroundings, and immediate objectives.</p>
+
+            <h3>1. Consistency Matters</h3>
+            <p>Users expect similar actions to look and behave similarly. If "Submit" buttons look completely different from page to page, or if "Next" and "Back" buttons swap positions arbitrarily, it disrupts the user's perception and causes confusion.</p>
+
+            <h3>2. Context Matters</h3>
+            <p>Our brains interpret information based on what surrounds it. For example, the word "Polish" changes meaning entirely based on its context:</p>
+            <ul>
+                <li><em>Fold napkins. Polish silverware. Wash dishes.</em> (Verb: to clean)</li>
+                <li><em>French napkins. Polish silverware. German dishes.</em> (Adjective: from Poland)</li>
+            </ul>
+            <p>In UI, an ambiguous icon will be interpreted based on the UI elements surrounding it.</p>
+
+            <h3>3. Goals Matter</h3>
+            <p>Users come to an interface with a specific mission. What they perceive is filtered through that goal. If a user is looking for "African Studies" in a university A-Z list, they will completely visually filter out "Applied Mathematics" or "Architecture."</p>
+
+            <div class="highlight-box">
+                <strong>The Cocktail Party Effect:</strong><br>
+                This psychological phenomenon describes the brain's ability to focus one's auditory (or visual) attention on a particular stimulus while filtering out a range of other stimuli—just like focusing on a single conversation in a noisy room. In UI design, users will "tune out" irrelevant information to find what they need.
+            </div>
+
+            <h3>Design Implications</h3>
+            <p>Because we perceive what we expect, designers must:</p>
+            <ul>
+                <li><strong>Avoid ambiguity:</strong> Make sure buttons and labels clearly state what they do (e.g., a clear "Search" button).</li>
+                <li><strong>Be consistent:</strong> Keep layouts, colors, and navigation patterns predictable.</li>
+                <li><strong>Understand the goals:</strong> Design interfaces that align with what the user is actually trying to accomplish, making the path to that goal prominent.</li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h2>Chapter 2: Our Vision is Optimized to See Structure</h2>
+            <p>The human brain automatically organizes visual elements into structured groups. This is explained by <strong>Gestalt Principles</strong>. Understanding these allows designers to guide the user's eye naturally without needing explicit instructions.</p>
+
+            <h3>1. Proximity</h3>
+            <p>Objects that are close to each other are perceived as a group. In UI, related settings or form fields (like Mac keyboard settings) should be grouped close together, with whitespace separating them from unrelated items.</p>
+
+            <h3>2. Similarity</h3>
+            <p>Objects that share visual characteristics (color, shape, size) are perceived as related. For instance, if all actionable links in an email app are blue, users will group them together in their minds as "clickable items."</p>
+
+            <h3>3. Continuity</h3>
+            <p>The eye is drawn to continuous lines and shapes, even if they are interrupted. Think of the IBM logo (made of disconnected lines) or a row of UI sliders; our brains connect the pieces into a single, cohesive flow.</p>
+
+            <h3>4. Closure</h3>
+            <p>When presented with incomplete visual information, our brains fill in the gaps to perceive a complete shape. (e.g., the WWF Panda logo is just black blotches, but we see a whole bear). In UI, this means you don't always have to draw boxes around everything; white space can create implied boundaries.</p>
+
+            <h3>5. Symmetry</h3>
+            <p>We tend to perceive complex shapes as being composed of simpler, symmetrical shapes. Well-structured, aligned tables and symmetrical grid layouts are much easier for users to process than staggered, asymmetrical designs.</p>
+
+            <h3>6. Figure/Ground</h3>
+            <p>The brain separates visuals into a foreground (the "figure") and a background (the "ground"). In UI design, this is heavily used with modal windows and pop-ups. Darkening or blurring the background app forces the popup to become the "Figure," demanding immediate attention.</p>
+
+            <h3>7. Common Fate</h3>
+            <p>Elements that move in the same direction or change together are perceived as grouped. In UI, if a user swipes and a group of cards slides over together, they are understood to be part of the same carousel or category.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CSE 4945 (B) - UI: Concepts and Design Study Materials.</p>
+    </footer>
+
+</body>
+</html>
