@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Guide: Figma Basics</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f8f9fa;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --accent-color: #e9ecef;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #444;
+        }
+
+        ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            color: #444;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background-color: var(--secondary-color);
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .highlight-box strong {
+            color: var(--primary-color);
+        }
+
+        .shortcut {
+            background-color: #eee;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+            color: #d63384;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Module 3 Study Guide</h1>
+        <p>Figma Basics: The Industry Standard for UI Design</p>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Course Index</a>
+
+        <div class="content-card">
+            <h2>Introduction to Figma</h2>
+            <p>Figma is a cloud-based design tool primarily used for user interface (UI) and user experience (UX) design. Because it is web-based, it allows for real-time collaboration, much like Google Docs but for design.</p>
+            
+            <h3>The Interface Anatomy</h3>
+            <ul>
+                <li><strong>Canvas (Center):</strong> The infinite workspace where you build your designs.</li>
+                <li><strong>Layers Panel (Left):</strong> Organizes all pages, frames, groups, and elements in a hierarchical tree.</li>
+                <li><strong>Properties Panel (Right):</strong> Changes based on what you have selected. Allows you to adjust dimensions, colors, typography, constraints, and auto layout.</li>
+                <li><strong>Toolbar (Top):</strong> Contains your essential tools (Move, Frame, Shapes, Text, Pen Tool, Comments).</li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h2>Core Concepts</h2>
+
+            <h3>1. Frames vs. Groups</h3>
+            <p>This is the most important distinction in Figma:</p>
+            <ul>
+                <li><strong>Groups (<span class="shortcut">Ctrl/Cmd + G</span>):</strong> Simply shrink-wrap around their contents. If you resize a group, the contents stretch and distort.</li>
+                <li><strong>Frames (<span class="shortcut">F</span>):</strong> Act like artboards or HTML <code>&lt;div&gt;</code> containers. They have independent sizes, can clip content, and allow you to set constraints and auto-layout. <em>Always use frames for screens (like an iPhone screen) and UI components (like buttons).</em></li>
+            </ul>
+
+            <h3>2. Auto Layout</h3>
+            <p>Auto Layout is Figma's version of CSS Flexbox. It allows UI elements to grow, shrink, and reflow automatically as their contents change.</p>
+            <ul>
+                <li><strong>Fixed Width/Height:</strong> The element stays the exact size you set it.</li>
+                <li><strong>Hug Contents:</strong> The container shrinks to wrap tightly around the text or objects inside it (perfect for buttons).</li>
+                <li><strong>Fill Container:</strong> The element expands to take up all available space within its parent frame.</li>
+            </ul>
+            <div class="highlight-box">
+                <strong>Pro Tip:</strong> Select multiple elements and press <span class="shortcut">Shift + A</span> to instantly wrap them in an Auto Layout frame. This makes spacing perfectly even and easy to adjust.
+            </div>
+
+            <h3>3. Components & Instances</h3>
+            <p>To maintain consistency (a key UI principle), use Components for UI elements you will reuse, like buttons, navbars, or cards.</p>
+            <ul>
+                <li><strong>Main Component (4 solid diamonds):</strong> The master version. Changes made here cascade to all copies.</li>
+                <li><strong>Instance (1 hollow diamond):</strong> A copy of the main component. You can override text or colors in an instance, but it inherits structure from the Main Component.</li>
+            </ul>
+
+            <h3>4. Styles and Variables</h3>
+            <p>Instead of manually picking the hex code `#0056b3` every time you need a primary blue, you can save it as a <strong>Color Style</strong> or <strong>Variable</strong>. You can do the same for Typography (e.g., "Heading 1: Arial 24px Bold") and Effects (e.g., Drop Shadows). Updating the style updates the whole file.</p>
+        </div>
+
+        <div class="content-card">
+            <h2>Prototyping</h2>
+            <p>Figma allows you to turn static designs into clickable prototypes without writing code. You access this by switching from the "Design" tab to the "Prototype" tab in the right-hand panel.</p>
+            
+            <ul>
+                <li><strong>Connections (Noodles):</strong> Blue wires you drag from an element on one frame to another frame.</li>
+                <li><strong>Triggers:</strong> <em>How</em> the user interacts (e.g., On Click, On Drag, While Hovering).</li>
+                <li><strong>Actions:</strong> <em>What</em> happens next (e.g., Navigate To, Open Overlay, Scroll To).</li>
+                <li><strong>Smart Animate:</strong> Figma looks for matching layer names between two frames and automatically creates smooth transitions (fades, slides, scaling) between them.</li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h2>Essential Keyboard Shortcuts</h2>
+            <p>Mastering these will significantly speed up your design workflow:</p>
+            <ul>
+                <li><span class="shortcut">V</span> : Move tool (Default)</li>
+                <li><span class="shortcut">F</span> : Frame tool</li>
+                <li><span class="shortcut">T</span> : Text tool</li>
+                <li><span class="shortcut">R</span> : Rectangle tool</li>
+                <li><span class="shortcut">O</span> : Ellipse (Circle) tool</li>
+                <li><span class="shortcut">Option/Alt + Drag</span> : Duplicate an element</li>
+                <li><span class="shortcut">Ctrl/Cmd + D</span> : Duplicate in place</li>
+                <li><span class="shortcut">Ctrl/Cmd + Scroll</span> : Zoom in/out</li>
+                <li><span class="shortcut">Spacebar + Drag</span> : Pan around the canvas</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CSE 4945 (B) - UI: Concepts and Design Study Materials.</p>
+    </footer>
+
+</body>
+</html>
