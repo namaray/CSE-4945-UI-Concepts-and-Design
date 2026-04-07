@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE 4945 (B) : UI Concepts and Design</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f8f9fa;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --hover-color: #004494;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        .section-title {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            color: var(--text-color);
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            margin-bottom: 1.5rem;
+            color: #555;
+            flex-grow: 1;
+        }
+
+        .tag-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag-list li {
+            background-color: var(--secondary-color);
+            color: #666;
+            font-size: 0.8rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--hover-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #333;
+            color: #fff;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CSE 4945 (B)</h1>
+        <p>UI: Concepts and Design</p>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Course Materials</h2>
+        
+        <div class="grid">
+            
+            <!-- Module 1: Mind in Mind (Chapters 1 & 2) -->
+            <div class="card">
+                <h2>1. Perception & Gestalt Principles</h2>
+                <ul class="tag-list">
+                    <li>Mind in Mind (Ch 1-2)</li>
+                    <li>Theory</li>
+                </ul>
+                <p>An introduction to the difference between UI and UX. Explore how human perception is shaped by context and goals (Cocktail Party Effect), and dive deep into Gestalt principles like Proximity, Similarity, Continuity, Closure, and Figure-ground.</p>
+                <!-- REPLACE 'lecture1.pdf' with the actual path to your first PDF file -->
+                <a href="lecture1.pdf" class="btn" target="_blank">View Slides</a>
+            </div>
+
+            <!-- Module 2: Mind in Mind (Chapter 3) -->
+            <div class="card">
+                <h2>2. Visual Hierarchy & Structure</h2>
+                <ul class="tag-list">
+                    <li>Mind in Mind (Ch 3)</li>
+                    <li>Design Structure</li>
+                </ul>
+                <p>Learn how our vision is optimized to see structure. This module covers arranging information effectively, removing repetition and noise, using contrast, and establishing clear visual hierarchies in UI controls to make displays easier to scan.</p>
+                <!-- REPLACE 'lecture2.pdf' with the actual path to your second PDF file -->
+                <a href="lecture2.pdf" class="btn" target="_blank">View Slides</a>
+            </div>
+
+            <!-- Module 3: Figma Basics -->
+            <div class="card">
+                <h2>3. Figma Basics</h2>
+                <ul class="tag-list">
+                    <li>Software Tool</li>
+                    <li>Hands-on</li>
+                </ul>
+                <p>A practical introduction to Figma, the industry-standard UI design tool. Learn the fundamentals of setting up frames, navigating the interface, using auto-layout, creating reusable components, and building basic prototypes.</p>
+                <!-- REPLACE '#' with the actual link to your Figma resource or slide deck -->
+                <a href="#" class="btn" target="_blank">Start Tutorial</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CSE 4945 (B) - UI: Concepts and Design. Hosted on GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
