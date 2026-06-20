@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Question Answers - UI Concepts</title>
+    <meta name="description" content="Answers to final exam questions for CSE-4945 UI Concepts and Design.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+    </button>
+
+    <div class="app-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-title">Exam Answers</div>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-tertiary);">CSE-4945 UI Concepts</p>
+                <a href="index.html" style="display: block; margin-top: 1rem; color: var(--accent-primary); text-decoration: none; font-weight: 500;">&larr; Back to Notes</a>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#summer2024" class="nav-link">Summer 2024 (242)</a></li>
+                    <li class="nav-item"><a href="#fall2024" class="nav-link">Fall 2024 (243)</a></li>
+                    <li class="nav-item"><a href="#spring2025" class="nav-link">Spring 2025 (251)</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="content-wrapper">
+                <section class="hero">
+                    <h1>Past Paper Solutions</h1>
+                    <p>Comprehensive answers to the final exam questions based strictly on the course slide decks and UX principles.</p>
+                </section>
+
+                <h2 id="summer2024">Summer 2024 (Question 242)</h2>
+                <div class="card">
+                    <div class="callout">
+                        <strong>Scenario:</strong> PQR is a successful e-commerce company replacing its popular gesture-driven mobile app with a unified web application because maintaining separate platforms is resource-intensive and they want to capture desktop users.
+                    </div>
+
+                    <h3>1. Is this a good plan? List 2 reasons. [5]</h3>
+                    <p><strong>No, this is likely a risky plan.</strong></p>
+                    <ol>
+                        <li><strong>Loss of User Experience Context:</strong> The mobile app’s success was driven by its innovative gesture-based interface (swiping, flicking). A unified web app might struggle to replicate this unique interaction perfectly on desktop, destroying the specific UX that made it popular among younger users.</li>
+                        <li><strong>Different Goals and Contexts:</strong> As per Chapter 1, "Context matters." Mobile users and desktop users have different contexts and expectations. Forcing a unified "one size fits all" platform ignores the specific interactive strengths of a native mobile app.</li>
+                    </ol>
+
+                    <h3>2. Design a 3-page wireframe for an E-commerce platform on mobile. [8]</h3>
+                    <p><em>(Descriptive Wireframe Outline)</em></p>
+                    <ul>
+                        <li><strong>Page 1 (Home/Browse):</strong> A top sticky navigation bar with a search icon and a hamburger menu. The main body consists of large, gesture-friendly product image cards that users can swipe horizontally through.</li>
+                        <li><strong>Page 2 (Product Details):</strong> A large hero image at the top. Below the image, clear typography for price and description, followed by a massive, highly contrasting "Add to Cart" button anchored to the bottom of the screen (easy for thumb reach).</li>
+                        <li><strong>Page 3 (Cart/Checkout):</strong> A clean, structured list (visual hierarchy) showing items, prices, and a subtotal. A prominent "Swipe to Checkout" slider or large primary button at the bottom.</li>
+                    </ul>
+
+                    <h3>3. Create 3 Personas representing different user groups. [6]</h3>
+                    <ul>
+                        <li><strong>Persona 1 (The Tech-Savvy Teen):</strong> <em>Name:</em> Liam (19). <em>Goal:</em> Quickly buy trendy items using his phone on the go. <em>Frustration:</em> Clunky, slow interfaces that require too much typing.</li>
+                        <li><strong>Persona 2 (The Desktop Bargain Hunter):</strong> <em>Name:</em> Sarah (45). <em>Goal:</em> Compare multiple products simultaneously on a large screen to find the best deal. <em>Frustration:</em> Mobile screens are too small to read detailed specs.</li>
+                        <li><strong>Persona 3 (The Commuter Shopper):</strong> <em>Name:</em> David (30). <em>Goal:</em> Browse products seamlessly with one hand while on the train. <em>Frustration:</em> Tiny buttons that are hard to tap while moving.</li>
+                    </ul>
+
+                    <div class="callout">
+                        <strong>Scenario Continuation:</strong> After deploying the new web app, users dropped. Users report unintuitive navigation and "missing" features, despite having feature parity.
+                    </div>
+
+                    <h3>4. Why are they facing this issue? [4]</h3>
+                    <p>They are facing this issue because <strong>"we perceive what we expect."</strong> The original users built a mental model around the intuitive, gesture-based mobile navigation. The unified web app broke this consistency. The features aren't missing; they are just placed in a visual hierarchy that contradicts the users' established expectations, making them feel unintuitive.</p>
+
+                    <h3>5. Would usability testing before the launch have helped? [2]</h3>
+                    <p><strong>Yes.</strong> A usability study is a technique to evaluate a product by testing it directly on users. It provides firsthand user interaction and would have challenged the company's assumption that "feature parity" equals "usability." It would have immediately revealed that users couldn't find the features in the new layout.</p>
+
+                    <h3>6. Explain how an empathy map and understanding pain points would prevent this. [5]</h3>
+                    <p>An <strong>Empathy Map</strong> (mapping what a user Says, Thinks, Does, and Feels) would have revealed that younger users <em>feel</em> delighted by the swiping gestures and <em>do</em> rely on one-handed flicks. Understanding user <strong>pain points</strong> (UX issues that frustrate the user) beforehand would have highlighted that removing the native gesture interface would introduce a severe <em>product</em> pain point. By empathizing with the user first, the company would have realized that maintaining the unique mobile experience was worth the extra resources.</p>
+                </div>
+
+                <h2 id="fall2024">Fall 2024 (Question 243)</h2>
+                <div class="card">
+                    <div class="callout">
+                        <strong>Scenario:</strong> The Government of Bangladesh is funding a locally-owned streaming service to reduce foreign currency outflow. You are designing this platform.
+                    </div>
+
+                    <h3>1. Primary vs Secondary research: which will you employ and why? [1+4]</h3>
+                    <p>I would primarily employ <strong>Primary Research</strong>.</p>
+                    <p><strong>Reason:</strong> Primary research is research you conduct yourself. Since this is a brand new, highly localized streaming service designed specifically for the Bangladeshi market, it requires firsthand interaction to understand the unique cultural nuances, specific language needs, and local internet usage behaviors of this specific demographic. Secondary research (information someone else put together) would lack the specific user feedback required to tailor a platform uniquely to Bangladeshi consumers.</p>
+
+                    <h3>2. Discuss the reason for considering inclusive design. [5]</h3>
+                    <p><strong>Inclusive design</strong> means making design choices that take into account personal identifiers like ability, race, economic status, language, age, and gender ("Solve for one, extend to many").</p>
+                    <p>For a national platform in Bangladesh, users will have vastly different <strong>economic statuses</strong> (varying data plans and internet speeds) and <strong>languages/dialects</strong>. By utilizing inclusive design, we ensure the platform provides options like low-bandwidth streaming modes and multi-dialect subtitles, making the product functional for the widest possible local audience.</p>
+
+                    <h3>3. Create 3 user stories and a persona. [3+3]</h3>
+                    <p><strong>Persona:</strong><br>
+                    <em>Name:</em> Anika (22, University Student in Dhaka).<br>
+                    <em>Goal:</em> Watch high-quality local dramas without exhausting her monthly mobile data.<br>
+                    <em>Frustration:</em> International platforms consume too much data and lack relatable local content.</p>
+                    <p><strong>User Stories (Hero + Goal + Conflict):</strong></p>
+                    <ol>
+                        <li>As a student on a budget, I want to toggle a "data-saver" mode so that my mobile data isn't drained while commuting.</li>
+                        <li>As a native Bengali speaker, I want accurate regional subtitles so that I can enjoy dramas from different districts of Bangladesh.</li>
+                        <li>As a busy professional, I want to download episodes for offline viewing so that I can watch them during internet outages.</li>
+                    </ol>
+
+                    <div class="callout">
+                        <strong>Scenario Continuation:</strong> You expand the library to global media and want to make it a global platform for everyone, requiring careful design considerations.
+                    </div>
+
+                    <h3>4. How can Crazy Eights help you in this situation? [2]</h3>
+                    <p><strong>Crazy Eights</strong> is a fast ideation technique where you sketch 8 ideas in 8 minutes. In this situation, it forces the design team to push past the most obvious UI layouts for a global streaming app and generate a large quantity of diverse, innovative ideas for seamlessly blending local Bangladeshi content with global media on a single screen without clutter.</p>
+
+                    <h3>5. Design a multipage website wireframe (3 pages). [6]</h3>
+                    <p><em>(Descriptive Wireframe Outline)</em></p>
+                    <ul>
+                        <li><strong>Page 1 (Home/Discovery):</strong> A top navigation bar with search. A hero slider highlighting a mix of global blockbusters and local hits. Below, horizontal scrolling carousels divided by clear visual hierarchy labels: "Trending Globally" and "Made in Bangladesh".</li>
+                        <li><strong>Page 2 (Category/Browse):</strong> A grid layout of movie posters. A sticky sidebar on the left providing inclusive filtering options (e.g., filter by Region, Language, Data Size, and Subtitles).</li>
+                        <li><strong>Page 3 (Video Player):</strong> The main video player dominating the screen. Below it, large, easily accessible toggle buttons for Audio Language, Subtitles, and Stream Quality (to support users with lower bandwidth).</li>
+                    </ul>
+
+                    <h3>6. Design 2 sets of storyboards for your global platform. [6]</h3>
+                    <ul>
+                        <li><strong>Big Picture Storyboard (Focuses on UX):</strong><br>
+                        <em>Scene:</em> A Bangladeshi expat sitting alone in a cafe in London. <br>
+                        <em>Plot:</em> They open the app missing home, but also want to watch a popular global show. <br>
+                        <em>Narrative:</em> The app seamlessly allows them to watch the global show, and then immediately recommends a familiar local drama, making them feel connected to their roots.</li>
+                        
+                        <li><strong>Close-up Storyboard (Focuses on Product):</strong><br>
+                        <em>Scene:</em> A user's finger interacting with the mobile screen. <br>
+                        <em>Plot:</em> The user taps a "Global/Local" toggle switch at the top of the interface. <br>
+                        <em>Narrative:</em> The screen instantly transitions using smooth animation, swapping out the grid of Hollywood movies for a grid of local content, demonstrating the intuitive architecture.</li>
+                    </ul>
+                </div>
+
+                <h2 id="spring2025">Spring 2025 (Question 251)</h2>
+                <div class="card">
+                    <div class="callout">
+                        <strong>Scenario:</strong> EcoVillage Connect connects traditional South Asian artisans (who have never used smartphones) with young, tech-savvy global buyers.
+                    </div>
+
+                    <h3>1. Artisans misinterpret interface symbols. Which principle explains this? Propose 2 solutions. [2+6]</h3>
+                    <p><strong>Principle:</strong> "We perceive what we expect" (Chapter 1) / Context Matters.</p>
+                    <p><strong>Explanation:</strong> The elderly artisans lack digital literacy and have no mental model or expectation for abstract digital icons like a "hamburger" or a "shopping cart." Their context relies on the physical world.</p>
+                    <p><strong>Solutions:</strong></p>
+                    <ol>
+                        <li>Replace abstract icons with explicit, localized text labels (e.g., replacing the hamburger icon with the word "Menu" or "Options" in their native language).</li>
+                        <li>Use highly literal, culturally relevant imagery. Instead of a modern shopping cart, use an image of a traditional market basket or a straightforward "Add Item" button.</li>
+                    </ol>
+
+                    <h3>2. Empathy map for Rashida (55, Rajshahi, no smartphone). [4]</h3>
+                    <ul>
+                        <li><strong>Says:</strong> "I make beautiful embroidery, but I don't know how to use this glass screen to show it to the world."</li>
+                        <li><strong>Thinks:</strong> "I hope international buyers can appreciate the authenticity of my hard work without me needing to be a computer expert."</li>
+                        <li><strong>Does:</strong> Relies heavily on local community leaders to help her take photos and press the right buttons.</li>
+                        <li><strong>Feels:</strong> Intimidated and overwhelmed by the technology, but hopeful about the financial independence it promises.</li>
+                    </ul>
+
+                    <h3>3. Design wireframes for two contrasting versions of a product listing page. [4+4]</h3>
+                    <ul>
+                        <li><strong>Version A (Optimized for Artisans):</strong> Extremely low complexity (Low Fidelity approach). A large, single camera button in the center to take a photo. Below it, a voice-record button (microphone icon) to narrate the product description, bypassing the need for typing. A giant "Submit to Leader" button at the bottom.</li>
+                        <li><strong>Version B (Optimized for International Buyers):</strong> High-fidelity structure. High-resolution image gallery at the top. A sticky sidebar with rich filtering (price, region, craft type). A section dedicated to the "Artisan's Story" providing cultural context, followed by an "Add to Cart" button.</li>
+                    </ul>
+
+                    <div class="callout">
+                        <strong>Scenario Continuation:</strong> The platform inadvertently favors tech-savvy sellers with professional photos. Master artisans are earning the least and feel intimidated.
+                    </div>
+
+                    <h3>4. How can Crazy Eights help in this situation? [2]</h3>
+                    <p><strong>Crazy Eights</strong> forces the team to rapidly sketch 8 distinct solutions in 8 minutes. It helps the team stop focusing on the obvious (like just teaching artisans photography) and pushes them to generate diverse, out-of-the-box UI ideas to fix the visual hierarchy bias quickly.</p>
+
+                    <h3>5. Analyze through "Equity-focused" vs "Universal" design. Which is appropriate and why? Provide interventions. [8]</h3>
+                    <p><strong>Analysis:</strong> <strong>Universal Design</strong> ("one size fits all") assumes the same interface works for everyone. If applied here, it would treat tech-savvy teens and elderly artisans equally, which maintains the unfair disadvantage for the artisans. <strong>Equity-focused Design</strong> provides <em>different</em> levels of opportunity and support to achieve fair outcomes for historically underrepresented or ignored groups.</p>
+                    <p><strong>Appropriate Approach:</strong> Equity-focused design is the correct approach because equality (treating them the same) isn't fixing the problem; the elderly artisans require specific, elevated support to compete fairly.</p>
+                    <p><strong>Interventions:</strong></p>
+                    <ol>
+                        <li>Introduce an "Authentic Heritage" badge that prioritizes traditional, unedited photos in the search algorithm over slick, professional ones.</li>
+                        <li>Implement a dedicated flow where community leaders upload on behalf of the artisans, shifting the technical burden away from the elderly users entirely.</li>
+                    </ol>
+
+                    <h3>6. Primary or Secondary research? Justify and provide 3 questions. [6]</h3>
+                    <p><strong>Primary Research.</strong></p>
+                    <p><strong>Justification:</strong> This is a highly specific, unprecedented problem involving a unique demographic (elderly rural artisans struggling against an algorithmic bias on a new platform). Secondary research (existing data) on this specific intersection of users and platform dynamics simply doesn't exist. You must observe and gather firsthand feedback.</p>
+                    <p><strong>Research Questions:</strong></p>
+                    <ol>
+                        <li>What specific elements of the upload screen make you feel intimidated or confused?</li>
+                        <li>How do you currently try to present your embroidery on the app without professional photography?</li>
+                        <li>How could the community coordinator interface be redesigned to better assist you in managing your sales?</li>
+                    </ol>
+
+                    <h3>7. Create 2 user stories addressing equity issues. [4]</h3>
+                    <ol>
+                        <li><strong>Empowering traditional artisans:</strong> As an elderly master artisan, I want my unedited, authentic photos to be highlighted as culturally genuine, so that I can compete fairly with younger, tech-savvy sellers.</li>
+                        <li><strong>Ensuring buyers discover authentic work:</strong> As an international art collector, I want an authenticity verification filter, so that I can easily discover and support true traditional craftspeople instead of digital resellers.</li>
+                    </ol>
+                </div>
+
+                <footer>
+                    <p>&copy; 2026 namaray - CSE-4945 UI Concepts and Design. Generated via Agent.</p>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById('mobile-toggle');
+            const sidebar = document.getElementById('sidebar');
+            const links = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('h2');
+
+            toggle.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+            });
+
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        sidebar.classList.remove('open');
+                    }
+                });
+            });
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 100) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                links.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
