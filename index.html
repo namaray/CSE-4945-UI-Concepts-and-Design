@@ -3,197 +3,371 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSE 4945 (B) : UI Concepts and Design</title>
-    <style>
-        :root {
-            --primary-color: #0056b3;
-            --secondary-color: #f8f9fa;
-            --text-color: #333;
-            --card-bg: #ffffff;
-            --hover-color: #004494;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f4f7f6;
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 3rem 1rem;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 1rem;
-        }
-
-        .section-title {
-            margin-bottom: 2rem;
-            font-size: 1.8rem;
-            color: var(--text-color);
-            border-bottom: 2px solid var(--primary-color);
-            display: inline-block;
-            padding-bottom: 0.5rem;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            padding: 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            border-top: 4px solid var(--primary-color);
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-
-        .card h2 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-
-        .card p {
-            margin-bottom: 1.5rem;
-            color: #555;
-            flex-grow: 1;
-        }
-
-        .tag-list {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .tag-list li {
-            background-color: var(--secondary-color);
-            color: #666;
-            font-size: 0.8rem;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            border: 1px solid #ddd;
-        }
-
-        .btn {
-            display: inline-block;
-            text-decoration: none;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 4px;
-            font-weight: 600;
-            text-align: center;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: var(--hover-color);
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: #333;
-            color: #fff;
-            margin-top: auto;
-        }
-
-        footer p {
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
-    </style>
+    <title>UI Concepts and Design - Study Notes</title>
+    <meta name="description" content="A comprehensive collection of study notes for CSE-4945 UI Concepts and Design.">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+    </button>
 
-    <header>
-        <h1>CSE 4945 (B)</h1>
-        <p>UI: Concepts and Design</p>
-    </header>
-
-    <div class="container">
-        <h2 class="section-title">Course Materials</h2>
-        
-        <div class="grid">
-            
-            <!-- Module 1: Mind in Mind (Chapters 1 & 2) -->
-            <div class="card">
-                <h2>1. Perception & Gestalt Principles</h2>
-                <ul class="tag-list">
-                    <li>Mind in Mind (Ch 1-2)</li>
-                    <li>Theory</li>
-                </ul>
-                <p>An introduction to the difference between UI and UX. Explore how human perception is shaped by context and goals (Cocktail Party Effect), and dive deep into Gestalt principles like Proximity, Similarity, Continuity, Closure, and Figure-ground.</p>
-                <!-- REPLACE 'lecture1.pdf' with the actual path to your first PDF file -->
-                <a href="lecture1-guide.html" class="btn">View Study Guide</a>
+    <div class="app-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-title">UI Concepts Notes</div>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-tertiary);">CSE-4945 Study Guide</p>
             </div>
-
-            <!-- Module 2: Mind in Mind (Chapter 3) -->
-            <div class="card">
-                <h2>2. Visual Hierarchy & Structure</h2>
-                <ul class="tag-list">
-                    <li>Mind in Mind (Ch 3)</li>
-                    <li>Design Structure</li>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#intro" class="nav-link">Introduction</a></li>
+                    <li class="nav-item"><a href="#ch1" class="nav-link">1. Mind in Mind (Ch 1-2)</a></li>
+                    <li class="nav-item"><a href="#ch2" class="nav-link">2. Mind in Mind (Ch 3)</a></li>
+                    <li class="nav-item"><a href="#ch3" class="nav-link">3. Design Frameworks</a></li>
+                    <li class="nav-item"><a href="#ch4" class="nav-link">4. UX Research</a></li>
+                    <li class="nav-item"><a href="#ch5" class="nav-link">5. Empathizing with Users</a></li>
+                    <li class="nav-item"><a href="#ch6" class="nav-link">6. Ideation & Audits</a></li>
+                    <li class="nav-item"><a href="#ch7" class="nav-link">7. Wireframes & Prototypes</a></li>
                 </ul>
-                <p>Learn how our vision is optimized to see structure. This module covers arranging information effectively, removing repetition and noise, using contrast, and establishing clear visual hierarchies in UI controls to make displays easier to scan.</p>
-                <!-- REPLACE 'lecture2.pdf' with the actual path to your second PDF file -->
-                <a href="lecture2-guide.html" class="btn">View Study Guide</a>
-            </div>
+            </nav>
+        </aside>
 
-            <!-- Module 3: Figma Basics -->
-            <div class="card">
-                <h2>3. Figma Basics</h2>
-                <ul class="tag-list">
-                    <li>Software Tool</li>
-                    <li>Hands-on</li>
-                </ul>
-                <p>A practical introduction to Figma, the industry-standard UI design tool. Learn the fundamentals of setting up frames, navigating the interface, using auto-layout, creating reusable components, and building basic prototypes.</p>
-                <!-- REPLACE '#' with the actual link to your Figma resource or slide deck -->
-                <a href="figma-guide.html" class="btn">View Study Guide</a>
-            </div>
+        <main class="main-content">
+            <div class="content-wrapper">
+                <section class="hero" id="intro">
+                    <h1>UI Concepts & Design</h1>
+                    <p>High-yield study notes extracted directly from course lectures, optimized for quick scanning and exam preparation.</p>
+                </section>
 
-        </div>
+                <h2 id="ch1">Mind in Mind (Chapters 1 & 2)</h2>
+                <div class="card">
+                    <h3>UI vs UX</h3>
+                    <p><strong>UI (User Interface):</strong> How the product is designed visually and interactively.</p>
+                    <p><strong>UX (User Experience):</strong> The overall experience the user has with the product, deeply rooted in psychology.</p>
+                    
+                    <h3>Core Psychological Principles</h3>
+                    <ul>
+                        <li><strong>We perceive what we expect:</strong> Expectations shape our perception.</li>
+                        <li><strong>Consistency matters:</strong> Consistent UI elements prevent confusion.</li>
+                        <li><strong>Context matters:</strong> The same information can be interpreted differently depending on its surroundings.</li>
+                        <li><strong>Goals matter:</strong> What a user is trying to achieve filters what they see (Cocktail Party Effect).</li>
+                    </ul>
+                    
+                    <div class="callout">
+                        <strong>Design Implications:</strong> Avoid ambiguity, be consistent, and always understand the user's end goals.
+                    </div>
+
+                    <h3>Our Vision is Optimized to See Structure</h3>
+                    <p>The human brain automatically groups visual elements using <strong>Gestalt principles</strong>:</p>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Principle</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Proximity</strong></td>
+                                    <td>Items placed close together are perceived as a group.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Similarity</strong></td>
+                                    <td>Items that look similar are perceived as related.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Continuity</strong></td>
+                                    <td>Elements arranged in a line or curve are perceived as related.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Closure</strong></td>
+                                    <td>We perceive incomplete shapes as complete wholes.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Symmetry</strong></td>
+                                    <td>Symmetrical elements are perceived as belonging together.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Figure-ground</strong></td>
+                                    <td>We separate elements into focal points (figure) and background (ground).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Common fate</strong></td>
+                                    <td>Elements moving in the same direction are perceived as a group.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <h2 id="ch2">Mind in Mind (Chapter 3)</h2>
+                <div class="card">
+                    <h3>Visual Hierarchy</h3>
+                    <p>Visual hierarchy refers to the deliberate arrangement of information. By prioritizing and organizing content, designers guide the user towards goals and make displays easier to scan.</p>
+                    
+                    <ul>
+                        <li><span class="badge blue">Rule 1</span> Break information down into digestible chunks.</li>
+                        <li><span class="badge blue">Rule 2</span> Label items prominently.</li>
+                    </ul>
+
+                    <h3>Formatting for Readability</h3>
+                    <ul>
+                        <li><strong>We seek structure:</strong> Structured text (like a flight ticket summary) is vastly superior to unstructured paragraphs.</li>
+                        <li><strong>Don't bury information:</strong> Keep crucial actions or data visible.</li>
+                        <li><strong>Remove repetition & noise:</strong> Streamline text and UI to reduce cognitive load.</li>
+                        <li><strong>Use contrast:</strong> Distinguish distinct pieces of information visually.</li>
+                    </ul>
+                </div>
+
+                <h2 id="ch3">Design Frameworks and Types of Design</h2>
+                <div class="card">
+                    <h3>Key Terminology</h3>
+                    <ul>
+                        <li><strong>User:</strong> Any person who uses a product.</li>
+                        <li><strong>End user:</strong> The specific audience a UX designer creates something for.</li>
+                        <li><strong>User experience:</strong> How a person feels about interacting with, or experiencing, a product.</li>
+                    </ul>
+
+                    <h3>Goals of Good UX</h3>
+                    <p>A successful design must answer <em>Yes</em> to these questions:</p>
+                    <ol>
+                        <li>Is the product easy to use?</li>
+                        <li>Is the product equitable?</li>
+                        <li>Does the product delight the user?</li>
+                        <li>Does it solve the user's problem?</li>
+                    </ol>
+
+                    <h3>Frameworks & Processes</h3>
+                    <p>A framework creates the basic structure that focuses and supports the problem you are trying to solve.</p>
+                    
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Framework</th>
+                                    <th>Stages / Elements</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>User-Centered Design</strong></td>
+                                    <td>Understand &rarr; Specify &rarr; Design &rarr; Evaluate</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Five Elements of UX</strong></td>
+                                    <td>Strategy &rarr; Scope &rarr; Structure &rarr; Skeleton &rarr; Surface</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Design Thinking</strong></td>
+                                    <td>Empathize &rarr; Define &rarr; Ideate &rarr; Prototype &rarr; Test</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>Types of Design & Accessibility</h3>
+                    <ul>
+                        <li><strong>Universal Design:</strong> <em>"One size fits all."</em> Creating one product for the widest range of abilities.</li>
+                        <li><strong>Inclusive Design:</strong> <em>"Solve for one, extend to many."</em> Considering ability, race, economic status, language, age, and gender.</li>
+                        <li><strong>Equity-Focused Design:</strong> Designing for historically underrepresented or ignored groups to achieve fair outcomes.</li>
+                        <li><strong>Accessibility:</strong> Designing products for people with disabilities (Motor, Deaf/Hard of hearing, Cognitive, Vision). Extends to permanent, temporary, or situational disabilities.</li>
+                    </ul>
+                </div>
+
+                <h2 id="ch4">User Experience Research</h2>
+                <div class="card">
+                    <p>UX research focuses on understanding user behaviors, needs, and motivations through observation and feedback.</p>
+
+                    <h3>Phases of Research</h3>
+                    <ul>
+                        <li><span class="badge purple">Foundational</span> <em>What should we build?</em> (Identifies user problems and solutions)</li>
+                        <li><span class="badge green">Design</span> <em>How should we build it?</em> (Informs the creation phase)</li>
+                        <li><span class="badge orange">Post-launch</span> <em>Did we succeed?</em> (Evaluates the final product)</li>
+                    </ul>
+
+                    <h3>Research Types</h3>
+                    <ul>
+                        <li><strong>Primary vs. Secondary:</strong> Primary research is conducted by you. Secondary research uses existing information (saves time/money, but lacks first-hand interaction).</li>
+                        <li><strong>Quantitative vs. Qualitative:</strong> Quantitative focuses on counting/measuring data. Qualitative focuses on <em>why</em> and <em>how</em> things happen.</li>
+                    </ul>
+
+                    <h3>Research Methods</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Benefits</th>
+                                    <th>Drawbacks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Interviews</strong></td>
+                                    <td>Understand "why", follow-up questions</td>
+                                    <td>Time-consuming, expensive, small sample size</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Surveys</strong></td>
+                                    <td>Large sample size, fast, inexpensive</td>
+                                    <td>No in-depth feedback</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Usability Studies</strong></td>
+                                    <td>Firsthand interaction, challenges assumptions</td>
+                                    <td>Expensive, lab environment differs from real life</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <h2 id="ch5">Empathizing with Users</h2>
+                <div class="card">
+                    <h3>Empathy Mapping & Pain Points</h3>
+                    <p>An <strong>Empathy Map</strong> explains what designers have learned about a user type via four quadrants: <em>Says, Thinks, Does, Feels</em>. Do not over-classify; the goal is simply to identify with the user.</p>
+                    <p><strong>Pain points</strong> are UX issues blocking users from their goals. Types include:</p>
+                    <ul>
+                        <li><span class="badge green">Financial</span></li>
+                        <li><span class="badge blue">Product</span></li>
+                        <li><span class="badge red">Process</span></li>
+                        <li><span class="badge orange">Support</span></li>
+                    </ul>
+
+                    <h3>Personas & User Stories</h3>
+                    <p><strong>Personas</strong> are fictional users whose goals/characteristics represent a larger group. They include quotes, goals, frustrations, and a brief scenario.</p>
+                    <p><strong>User Stories</strong> are fictional one-sentence stories to inspire design:</p>
+                    <div class="callout" style="text-align: center; font-size: 1.1rem;">
+                        <em>"As a <strong>[type of user]</strong>, I want to <strong>[action]</strong>, so that <strong>[benefit]</strong>."</em>
+                    </div>
+
+                    <h3>Journeys & Edge Cases</h3>
+                    <ul>
+                        <li><strong>User Journey:</strong> The series of experiences a user has interacting with your product. Helps create obstacle-free paths and highlights new pain points.</li>
+                        <li><strong>Edge Case:</strong> What happens when things go wrong beyond the user's control. Resolved via personas, thorough reviews, and wireframes.</li>
+                        <li><strong>Curb-cut Effect:</strong> Products designed for people with disabilities often end up helping everyone.</li>
+                    </ul>
+                </div>
+
+                <h2 id="ch6">Ideation & Audits</h2>
+                <div class="card">
+                    <h3>Ideation</h3>
+                    <p>Generating a broad set of ideas with no attempt to judge or evaluate them initially.</p>
+                    <ul>
+                        <li>Brainstorm out loud, document all ideas, focus on quantity.</li>
+                        <li>Why so many ideas? The list will naturally narrow based on constraints, equity focus, and user testing.</li>
+                    </ul>
+
+                    <h3>Problem Statements</h3>
+                    <p>A structured way to state exactly what is being solved:</p>
+                    <div class="callout" style="text-align: center;">
+                        <em><strong>[User name]</strong> is a <strong>[user characteristics]</strong> who needs <strong>[user need]</strong> because <strong>[insight]</strong>.</em>
+                    </div>
+
+                    <h3>Competitive Audits</h3>
+                    <p>Steps to audit competitors: Outline goals &rarr; Create spreadsheet &rarr; Call out features &rarr; Research &rarr; Analyze &rarr; Summarize.</p>
+                    <p><strong>Benefits:</strong> Informs design, solves usability problems, reveals market gaps, provides reliable evidence, and saves resources.</p>
+
+                    <h3>Storyboards</h3>
+                    <p>A series of panels visually describing a user's experience. Contains a <em>Character, Scene, Plot,</em> and <em>Narrative</em>.</p>
+                    <ul>
+                        <li><strong>Big picture storyboard:</strong> Focuses on the user experience.</li>
+                        <li><strong>Close-up storyboard:</strong> Focuses on the product UI details.</li>
+                    </ul>
+                </div>
+
+                <h2 id="ch7">Wireframes & Prototypes</h2>
+                <div class="card">
+                    <h3>Information Architecture (IA)</h3>
+                    <p>Organizes content to help users understand where they are and where the information they want is located. Provides a high-level view, helps stakeholders review, and allows ideas to grow.</p>
+
+                    <h3>Wireframes</h3>
+                    <p>A basic outline of a digital experience (like an app or website). Establishes basic structure and highlights intended function.</p>
+                    <ul>
+                        <li><strong>Paper Wireframes:</strong> Fast, inexpensive, great for exploring lots of ideas and narrowing focus.</li>
+                        <li><strong>Benefits:</strong> Informs elements, catches problems early, focuses stakeholders on structure, saves time, iterates quickly.</li>
+                    </ul>
+
+                    <h3>Fidelity</h3>
+                    <p>How closely a design matches the look-and-feel of the final product.</p>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Low Fidelity (Lo-Fi)</th>
+                                    <th>High Fidelity (Hi-Fi) / Mockups</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Lower complexity</td>
+                                    <td>Closely matches final look</td>
+                                </tr>
+                                <tr>
+                                    <td>Less refined or polished</td>
+                                    <td>Highly refined (typography, iconography, color)</td>
+                                </tr>
+                                <tr>
+                                    <td>Focuses on structure & function</td>
+                                    <td>Static simulation of finished product</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <footer>
+                    <p>&copy; 2026 namaray - CSE-4945 UI Concepts and Design. Generated via Agent.</p>
+                </footer>
+            </div>
+        </main>
     </div>
 
-    <footer>
-        <p>&copy; 2024 CSE 4945 (B) - UI: Concepts and Design. Hosted on GitHub Pages.</p>
-    </footer>
+    <script>
+        // Simple script to handle mobile sidebar toggle and active states
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById('mobile-toggle');
+            const sidebar = document.getElementById('sidebar');
+            const links = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('h2, .hero');
 
+            // Toggle sidebar
+            toggle.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+            });
+
+            // Close sidebar when clicking a link (mobile)
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        sidebar.classList.remove('open');
+                    }
+                });
+            });
+
+            // Scrollspy logic
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 100) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                links.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
